@@ -59,7 +59,7 @@
                   />
                 </svg>
               </span>
-              {{ localConfig.socials.twitter.link }}
+              Twitter
             </a>
             <a
               v-if="
@@ -86,7 +86,7 @@
                   </g>
                 </svg>
               </span>
-              {{ localConfig.socials.telegram.link }}
+              Telegram
             </a>
             <a
               v-if="
