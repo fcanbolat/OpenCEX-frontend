@@ -35,7 +35,7 @@
                   </g>
                 </svg>
               </span>
-              
+              Facebook
             </a>
             <a
               v-if="
@@ -59,7 +59,7 @@
                   />
                 </svg>
               </span>
-              
+              Twitter
             </a>
             <a
               v-if="
@@ -86,7 +86,7 @@
                   </g>
                 </svg>
               </span>
-              
+              Telegram
             </a>
             <a
               v-if="
