@@ -35,7 +35,7 @@
                   </g>
                 </svg>
               </span>
-              {{ localConfig.socials.facebook.link }}
+              Facebook
             </a>
             <a
               v-if="
