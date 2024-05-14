@@ -10,58 +10,66 @@
           <div class="rights !mb-2">{{ $t("common.built_by") }}</div>
           <div class="rights">{{ $t("common.rights") }}</div>
           <div class="footer__socials-container">
-           
-            <a
-              v-if="
+              <a v-if="
+                localConfig.socials.facebook &&
+                localConfig.socials.facebook !== ''
+              "
+                 class="footer__social-item"
+                 :href="`https://facebook.com/${localConfig.socials.facebook.link}`">
+                  <span class="pl-2">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                           width="10"
+                           height="17"
+                           viewBox="0 0 10 17">
+                          <g>
+                              <g>
+                                  <path fill="#42a4ff"
+                                        d="M7 15.998a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6H0V5.996h3v-3a3 3 0 0 1 3-3c.182 0 .352.053.5.14a.988.988 0 0 1 .5-.14h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7v2h3v4H7z" />
+                              </g>
+                          </g>
+                      </svg>
+                  </span>
+                  &nbsp;
+              </a>
+              <a v-if="
                 localConfig.socials.twitter &&
                 localConfig.socials.twitter !== ''
               "
-              class="footer__social-item"
-              :href="`https://twitter.com/${localConfig.socials.twitter.link}`"
-            >
-              <span class="pl-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  viewBox="0 0 12 17"
-                >
-                  <path
-                    d="M4 11c0 1.7 1.2 2 1.8 2H10c1.1 0 2 .9 2 2s-.9 2-2 2H6c-1.7 0-3.1-.6-4.3-1.9C.6 13.9 0 12.4 0 10.6V2C0 .9.9 0 2 0s2 .9 2 2v3h6c1.1 0 2 .9 2 2s-.9 2-2 2H4v2z"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    fill="#42a4ff"
-                  />
-                </svg>
-              </span>
-              Twitter
-            </a>
-            <a
-              v-if="
+                 class="footer__social-item"
+                 :href="`https://twitter.com/${localConfig.socials.twitter.link}`">
+                  <span class="pl-1">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                           width="10"
+                           viewBox="0 0 12 17">
+                          <path d="M4 11c0 1.7 1.2 2 1.8 2H10c1.1 0 2 .9 2 2s-.9 2-2 2H6c-1.7 0-3.1-.6-4.3-1.9C.6 13.9 0 12.4 0 10.6V2C0 .9.9 0 2 0s2 .9 2 2v3h6c1.1 0 2 .9 2 2s-.9 2-2 2H4v2z"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                fill="#42a4ff" />
+                      </svg>
+                  </span>
+                  &nbsp;
+              </a>
+              <a v-if="
                 localConfig.socials.telegram &&
                 localConfig.socials.telegram !== ''
               "
-              class="footer__social-item"
-              :href="`https://t.me/${localConfig.socials.telegram.link}`"
-            >
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 19 17"
-                >
-                  <g>
-                    <g>
-                      <path
-                        fill="#42a4ff"
-                        d="M.31 7.16L18.316.041c.382-.152.776.192.693.602L15.778 16.57a.514.514 0 0 1-.81.32l-4.411-3.281a.716.716 0 0 0-.89.025l-2.446 2.043a.512.512 0 0 1-.82-.253L4.703 9.828.316 8.15c-.446-.17-.45-.815-.006-.99zm5.44 2.77l.928 3.338c.065.237.4.212.432-.032l.241-1.83c.046-.345.206-.662.455-.9l7.076-6.74c.133-.125-.026-.339-.18-.242L6.128 8.935a.896.896 0 0 0-.378.996z"
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </span>
-              Telegram
-            </a>
+                 class="footer__social-item"
+                 :href="`https://t.me/${localConfig.socials.telegram.link}`">
+                  <span>
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                           width="14"
+                           height="14"
+                           viewBox="0 0 19 17">
+                          <g>
+                              <g>
+                                  <path fill="#42a4ff"
+                                        d="M.31 7.16L18.316.041c.382-.152.776.192.693.602L15.778 16.57a.514.514 0 0 1-.81.32l-4.411-3.281a.716.716 0 0 0-.89.025l-2.446 2.043a.512.512 0 0 1-.82-.253L4.703 9.828.316 8.15c-.446-.17-.45-.815-.006-.99zm5.44 2.77l.928 3.338c.065.237.4.212.432-.032l.241-1.83c.046-.345.206-.662.455-.9l7.076-6.74c.133-.125-.026-.339-.18-.242L6.128 8.935a.896.896 0 0 0-.378.996z" />
+                              </g>
+                          </g>
+                      </svg>
+                  </span>
+                  &nbsp;
+              </a>
             <a
               v-if="
                 localConfig.socials.linkedin &&
